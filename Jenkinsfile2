@@ -13,8 +13,19 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                echo 'Building'
                 sh 'mvn --version'
                 sh 'printenv'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
             }
         }
     }
